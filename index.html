@@ -1,3 +1,131 @@
-<html>
-  <h1> hola vagancia </h1>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Restaurante "QUE RICO" </title>
+    <!-- IMPORTACION JQUERY-->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+   
+    <!-- IMPORTACION BOOSTRAP Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!--Latest compiled and minified JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!--imortacion de api google cloud-->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARFh2FhG-rgHCYi7Xb7CQVrDkJYaO-w_c&libraries=places&callback=initMap"></script>
+</head>
+<body>
+    <!--importacion de menu de BOOSTRAP navbar-->
+<nav class="navbar navbar-blue;">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="<?php echo site_url();?>/welcome">RESTAURANT "QUE RICO"</a>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active">
+        <a href="<?php echo site_url();?>/menus/Desayunos"> DESAYUNOS</span></a></li>
+
+        <li class="active">
+        <a href="<?php echo site_url();?>/menus/Almuerzos"> ALMUERZOS</span></a></li>
+        
+        <li class="active">
+        <a href="<?php echo site_url();?>/menus/Meriendas"> MERIENDAS</span></a></li>
+
+        <li class="active">
+        <a href="<?php echo site_url();?>/menus/Platos"> PLATOS A LA CARTA</span></a></li>
+        <!--<li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li> -->
+      </ul>
+      <form class="navbar-form navbar-left">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Buscar</button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="<?php echo site_url();?>/id" >Quienes somos</a></li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Inicio <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">iniciar sesión</a></li>
+            <li><a href="#">Configuraciones</a></li>
+            <li><a href="#"></a>Ayuda</li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Salir</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<div class="row" style="width: 1200px; margin: 0 auto">
+        <div class="col-md-12" style="background-color: rgb(28, 184, 74) ; padding: 5px 0px 0px 0px;">   </div>
+</div>
+<div class="row" style="width: 1200px; margin: 0 auto">
+    <div class="col-md-12 text-center">
+    <h1 style="color: #D35400;">MENU DEL DIA</h1>
+    <H2> Variedad de platillos para los ALMUERZOS</H2>
+    </div>
+</div>
+<div class="row"style="width: 1200px; margin: 0 auto">
+        <div class="col-md-12" style="background-color: rgb(28, 184, 74) ; padding: 5px 0px 0px 0px;">   </div>
+</div>
+<div class="row" style="width: 1200px; margin: 0 auto">
+    <div class="col-md-6">
+        <h3 style="color:#2E86C1"> Nuestros almuerzos estan conformados de: </h3>
+    </div>
+
+</div>
+
+<div class="row"style="width: 1200px; margin: 0 auto">
+    <div class="col-md-4">
+            <h2>- APERITIVO</h2>
+            <h2>- SOPA</h2>
+            <h2>- PLATO FUERTE</h2>
+            <h2>- JUGOS NATURALES</h2>
+            <h2>- POSTRE</h2>
+    </div>
+    <div class="col-md-8">
+    <img  src="<?php echo base_url();?>/assets/imagenes/almuerzo.jpg" alt="" width="600px" height="400px"> </td>
+    </div>
+</div>
+<br>
+
+
+<div class="row" style="background-color: #2980B9 ; color: aliceblue; padding:1px">
+    <div class="col-md-6 text-center">
+    <h4> Universidad Técnica de Cotopaxi &copy; 2023</h4>
+    </div>
+    <div class="col-md-6 text-center"> 
+        <b> Desarrollado por:</b>
+        <p> Alvaro Lasluisa</p>
+    </div>
+
+</div>
+    </body>
 </html>
