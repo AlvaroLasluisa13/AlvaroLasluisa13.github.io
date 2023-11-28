@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULADORA</title>
+</head>
+<body>
+    <!-- mesaje -->
+    <b>Primer #: </b>
+    <input type="number" id="n1" value="">
+    <br><br>
+    <b>Segundo #: </b>
+    <input type="number" id="n2" value="">
+    <br> <br>
+    <!-- Crear boton sumar -->
+    <button style="color:blue" onclick ="sumar()" type="button" name="button">Sumar </button>
+    <button style="color:red" onclick ="resta()" type="button" name="button">Resta</button>
+    <button style="color:green" onclick ="multiplicacion()" type="button" name="button">Multiplicacion</button>
+    <button style="color:black" onclick ="division()" type="button" name="button">Division</button>
+
+    <script type="text/javascript">
+            function sumar (){
+            // java
+            // santiago
+                var num1=document.getElementById('n1').value;
+                //alert(num1);
+                var num2=document.getElementById('n2').value;
+                //isantiago
+                alert(parseInt(num1)+parseInt(num2));
+
+            }
+
+            function resta (){
+            // santiago
+                var num1=document.getElementById('n1').value;
+                //alert(num1);
+                var num2=document.getElementById('n2').value;
+                //invoco
+                alert(parseInt(num1)-parseInt(num2));
+
+            }
+            function multiplicacion (){
+            // santiago
+            // valor
+                var num1=document.getElementById('n1').value;
+                //alert(num1);
+                var num2=document.getElementById('n2').value;
+                //numero enteroo
+                alert(parseInt(num1)*parseInt(num2));
+
+            }
+            function division (){
+            // santiago
+            // logica
+                var num1=document.getElementById('n1').value;
+                //alert(num1);
+                var num2=document.getElementById('n2').value;
+                // numero enteroo
+                alert(parseInt(num1)/parseInt(num2));
+
+            }
+    </script>
+
+</body>
+</html>
