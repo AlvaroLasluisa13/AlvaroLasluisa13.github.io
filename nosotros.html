@@ -65,6 +65,18 @@
         const correo=document.getElementById("correo").value;
         const motivo=document.getElementById("motivo").value;
         const mensaje=document.getElementById("mensaje").value;
+        console.log(nombre, correo, motivo, mensaje);
+        push(
+                    ref(database, 'restaurant'),
+                    {
+                        name: nombre,
+                        correos: correo,
+                        motivos: motivo,
+                        mensajes: mensaje
+                    }
+                );
+
+
       }
     </script>
 </body>
