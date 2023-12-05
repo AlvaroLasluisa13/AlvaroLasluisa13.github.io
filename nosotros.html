@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario HTML</title>
+</head>
+<body>
+
+    <h1>Formulario de Contacto</h1>
+
+    <form action="/procesar-formulario" method="post">
+        <!-- Campo de texto para el nombre -->
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <!-- Campo de correo electrónico -->
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" name="correo" required>
+
+        <!-- Campo de selección (dropdown) para la opción de motivo de contacto -->
+        <label for="motivo">Motivo de contacto:</label>
+        <select id="motivo" name="motivo">
+            <option value="consulta">Consulta</option>
+            <option value="comentario">Comentario</option>
+            <option value="sugerencia">Sugerencia</option>
+        </select>
+
+        <!-- Área de texto para el mensaje -->
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+        <!-- Botón de envío -->
+        <button type="submit">Enviar</button>
+    </form>
+
+</body>
+</html>
