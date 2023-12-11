@@ -54,7 +54,29 @@
     </div>
    </div>
      
-    
+   <br><br>
+   <h1>LISTA DE COMENTARIOS</h1>
+   <table class="table table-borderred" id="tbl_product">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>CORREO</th>
+        <th>CONSULTA</th>
+        <th>MENSAJE</th>
+        <th>ACCION</th>
+      </tr>
+    </thead>
+    <tbody>
+        <?php foreach ($productList as $p): ?>
+          <tr>
+            <td><?php echo $p->nombre ?></td>
+            <td><?php echo $p->correo ?></td>
+            <td><?php echo $p->consulta?></td>
+            <td><?php echo $p->mensaje?></td>
+        </tr>
+        <?php endforeach; ?>
+    </tbody>
          <!--conexxion con firebase -->
          <script type="module">
             // Import the functions you need from the SDKs you need
