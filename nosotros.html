@@ -12,31 +12,48 @@
     
     <h1>Formulario de Contacto</h1>
 
-    <form action="/procesar-formulario" method="post">
-        <!-- Campo de texto para el nombre -->
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required>
 
-        <!-- Campo de correo electrónico -->
-        <label for="correo">Correo electrónico:</label>
-        <input type="email" id="correo" name="correo" required>
+    <div class="row">
 
-        <!-- Campo de selección (dropdown) para la opción de motivo de contacto -->
-        <label for="motivo">Motivo de contacto:</label>
-        <select id="motivo" name="motivo">
-            <option value="consulta">Consulta</option>
-            <option value="comentario">Comentario</option>
-            <option value="sugerencia">Sugerencia</option>
-        </select>
+        <div class="col-md-6">
+            <form action="/procesar-formulario" method="post">
+                <!-- Campo de texto para el nombre -->
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+        
+                <!-- Campo de correo electrónico -->
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo" required>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <form action="procesar_formulario" method="post">
 
-        <!-- Área de texto para el mensaje -->
-        <label for="mensaje">Mensaje:</label>
-        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                <!-- Campo de selección (dropdown) para la opción de motivo de contacto -->
+                <label for="motivo">Motivo de contacto:</label>
+                <select id="motivo" name="motivo">
+                    <option value="consulta">Consulta</option>
+                    <option value="comentario">Comentario</option>
+                    <option value="sugerencia">Sugerencia</option>
+                </select>
+        
+                <!-- Área de texto para el mensaje -->
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+            </form>
+        </div>
+    </div>
 
-        <!-- Botón de envío -->
-        <button type="submit">Enviar</button>
-    </form>
+   <div class="row">
+    <div class="col-md-6">
+           <!-- Botón de envío -->
+           <button type="submit">Enviar</button>
 
+    </div>
+   </div>
+     
     
          <!--conexxion con firebase -->
          <script type="module">
@@ -69,7 +86,7 @@
         const mensaje=document.getElementById("mensaje").value;
         console.log(nombre, correo, motivo, mensaje);
         push(
-                    ref(database, 'restaurant'),
+                    ref(database, 'CONEXION WEB'),
                     {
                         name: nombre,
                         correos: correo,
