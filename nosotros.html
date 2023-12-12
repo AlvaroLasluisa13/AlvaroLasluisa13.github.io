@@ -19,10 +19,31 @@
         }
 
         .login-form {
-            background-color: #ffffff;
+            background-color: #ffc107; /* Color anaranjado */
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-out; /* Animación de entrada */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Estilo para el botón */
+        .btn-primary {
+            background-color: #007bff; /* Color azul Bootstrap */
+            border-color: #007bff; /* Color borde azul Bootstrap */
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3; /* Color azul oscuro Bootstrap al pasar el ratón */
+            border-color: #0056b3; /* Color borde azul oscuro Bootstrap al pasar el ratón */
         }
     </style>
 </head>
