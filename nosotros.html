@@ -6,67 +6,107 @@
     <title>Login Page</title>
     <!-- Agrega el enlace a Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- Agrega el enlace a Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Agrega el enlace a Hover.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css">
     <style>
-        /* Estilos personalizados */
         body {
-            background-color: #f8f9fa;
+            background: linear-gradient(45deg, #3498db, #e74c3c, #2ecc71);
+            background-size: 600% 600%;
+            animation: gradientAnimation 10s ease infinite;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
         }
 
         .login-container {
-            max-width: 400px;
-            margin: auto;
-            margin-top: 100px;
-        }
-
-        .login-form {
-            background-color: #ffc107; /* Color anaranjado */
+            background-color: rgba(255, 255, 255, 0.9);
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            animation: fadeIn 1s ease-out; /* Animación de entrada */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            animation: fadeInUp 1s ease-out;
+            max-width: 400px; /* Ajuste el tamaño máximo según sea necesario */
+            width: 100%;
+            margin: auto;
         }
 
-        @keyframes fadeIn {
+        @keyframes fadeInUp {
             from {
+                transform: translateY(20px);
                 opacity: 0;
             }
             to {
+                transform: translateY(0);
                 opacity: 1;
+            }
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
             }
         }
 
         /* Estilo para el botón */
         .btn-primary {
-            background-color: #007bff; /* Color azul Bootstrap */
-            border-color: #007bff; /* Color borde azul Bootstrap */
+            background-color: #1abc9c;
+            border-color: #1abc9c;
+            width: 100%;
+            padding: 10px;
+            margin-top: 15px;
+            font-size: 16px;
+            font-weight: bold;
         }
 
         .btn-primary:hover {
-            background-color: #0056b3; /* Color azul oscuro Bootstrap al pasar el ratón */
-            border-color: #0056b3; /* Color borde azul oscuro Bootstrap al pasar el ratón */
+            background-color: #16a085;
+            border-color: #16a085;
+            transform: scale(1.05);
+            transition: transform 0.3s ease-out;
+        }
+
+        /* Estilo para el logo */
+        .logo-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .logo-container img {
+            width: 100px; /* Ajusta el tamaño según tu necesidad */
+            height: auto;
         }
     </style>
 </head>
 <body>
-    <div class="container login-container">
-        <div class="row">
-            <div class="col-md-12 login-form">
-                <h3 class="text-center">Iniciar sesión</h3>
-                <form action="#" method="post">
-                    <div class="form-group">
-                        <label for="username">Usuario:</label>
-                        <input type="text" class="form-control" id="username" name="username" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="password">Contraseña:</label>
-                        <input type="password" class="form-control" id="password" name="password" required>
-                    </div>
-                    <div class="form-group text-center">
-                        <button type="submit" class="btn btn-primary">Iniciar sesión</button>
-                    </div>
-                </form>
-            </div>
+    <div class="login-container">
+        <div class="logo-container">
+            <img src="ruta-del-logo.png" alt="Logo de la empresa">
         </div>
+        <h3 class="text-center mb-4">Iniciar sesión</h3>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="username">Usuario:</label>
+                <input type="text" class="form-control" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Contraseña:</label>
+                <input type="password" class="form-control" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary hvr-float-shadow">Iniciar sesión</button>
+            </div>
+        </form>
     </div>
 
     <!-- Agrega el enlace a Bootstrap JS y Popper.js -->
