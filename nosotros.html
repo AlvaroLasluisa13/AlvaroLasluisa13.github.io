@@ -51,8 +51,8 @@
    </div>
      
    <br><br>
-   <h1>LISTA DE COMENTARIOS</h1>
-   <table class="table table-borderred" id="tbl_product">
+   <!-- <h1>LISTA DE COMENTARIOS</h1> -->
+   <!-- <table class="table table-borderred" id="tbl_product">
     <thead>
       <tr>
         <th>ID</th>
@@ -62,7 +62,7 @@
         <th>MENSAJE</th>
         <th>ACCIÓN</th>
       </tr>
-    </thead>
+    </thead> -->
     <!-- <tbody>
         <?php foreach ($productList as $p): ?>
           <tr>
@@ -72,7 +72,41 @@
             <td><?php echo $p->mensaje?></td>
         </tr>
         <?php endforeach; ?> -->
-    </tbody>
+    <!-- </tbody> -->
+
+    <div class="u-container-layout u-valign-top u-container-layout-2">
+        <h3 class="u-align-left u-custom-font u-font-montserrat u-text u-text-body-alt-color u-text-default u-text-2"> Empezar</h3>
+        <p class="u-align-left u-text u-text-body-alt-color u-text-default u-text-3"> Estamos aquí para ayudar. Cuéntanos un poco sobre tu proyecto y estaremos en contacto.</p>
+        <div class="u-form u-palette-5-dark-3 u-radius-20 u-form-1">
+          <form action="https://forms.nicepagesrv.com/v2/form/process" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="email" name="form" style="padding: 40px;">
+            <input type="hidden" id="siteId" name="siteId" value="2625074" wfd-id="id1504">
+            <input type="hidden" id="pageId" name="pageId" value="2633932" wfd-id="id1505">
+            <div class="u-form-group u-form-name">
+              <label for="name-2137" class="u-form-control-hidden u-label"></label>
+              <input type="text" placeholder="Enter your Name" id="name-2137" name="name" class="u-input u-input-rectangle u-radius-20" required="" wfd-id="id1506">
+            </div>
+            <div class="u-form-email u-form-group">
+              <label for="email-2137" class="u-form-control-hidden u-label"></label>
+              <input type="email" placeholder="Enter a valid email address" id="email-2137" name="email" class="u-input u-input-rectangle u-radius-20" required="" wfd-id="id1507">
+            </div>
+            <div class="u-form-group u-form-message">
+              <label for="message-2137" class="u-form-control-hidden u-label"></label>
+              <textarea placeholder="Enter your message" rows="4" cols="50" id="message-2137" name="message" class="u-input u-input-rectangle u-radius-20" required=""></textarea>
+            </div>
+            <div class="u-align-left u-form-group u-form-submit">
+              <a href="#" class="u-active-white u-border-none u-btn u-btn-round u-btn-submit u-button-style u-hover-white u-palette-2-base u-radius-20 u-text-active-palette-2-base u-text-hover-palette-2-base u-btn-1">Entregar</a>
+              <input type="submit" value="submit" class="u-form-control-hidden" wfd-id="id1508">
+            </div>
+            <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
+            <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>
+            <input type="hidden" value="" name="recaptchaResponse" wfd-id="id1509">
+            <input type="hidden" name="formServices" value="0fa3409e-da50-a7e3-2a96-ac3aef0a256d">
+            <input type="hidden" name="siteKey" value="6LetPRgiAAAAAGX121nVdkYGTN-RfCXh4wAlbDFh">
+          </form>
+        </div>
+      </div>
+
+
 
          <!--conexxion con firebase -->
          <script type="module">
