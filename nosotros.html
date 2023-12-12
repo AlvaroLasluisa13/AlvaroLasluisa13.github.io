@@ -8,10 +8,8 @@
 
 
 <body>
-
-    
+  
     <h1>Formulario de Contacto</h1>
-
 
     <div class="row">
 
@@ -30,7 +28,6 @@
     <div class="row">
         <div class="col-md-6">
             <form action="procesar_formulario" method="post">
-
                 <!-- Campo de selección (dropdown) para la opción de motivo de contacto -->
                 <label for="motivo">Motivo de contacto:</label>
                 <select id="motivo" name="motivo">
@@ -38,8 +35,7 @@
                     <option value="comentario">Comentario</option>
                     <option value="sugerencia">Sugerencia</option>
                 </select>
-        
-                <!-- Área de texto para el mensaje -->
+                        <!-- Área de texto para el mensaje -->
                 <label for="mensaje">Mensaje:</label>
                 <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
             </form>
@@ -49,8 +45,8 @@
    <div class="row">
     <div class="col-md-6">
            <!-- Botón de envío -->
-           <button type="submit">Enviar</button>
-
+        
+           <button type="button" onclick="crearRegistro()">ENVIAR</button>
     </div>
    </div>
      
@@ -64,7 +60,7 @@
         <th>CORREO</th>
         <th>CONSULTA</th>
         <th>MENSAJE</th>
-        <th>ACCION</th>
+        <th>ACCIÓN</th>
       </tr>
     </thead>
     <!-- <tbody>
@@ -77,29 +73,30 @@
         </tr>
         <?php endforeach; ?> -->
     </tbody>
+
          <!--conexxion con firebase -->
          <script type="module">
-            // Import the functions you need from the SDKs you need
+             // Import the functions you need from the SDKs you need
             import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js";
             import { getDatabase, ref, push, onValue, remove } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-database.js";
             // TODO: Add SDKs for Firebase products that you want to use
             // https://firebase.google.com/docs/web/setup#available-libraries
-          
-            // Your web app's Firebase configuration
-            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-            const firebaseConfig = {
-              apiKey: "AIzaSyBgsv9Z63n-HVi5dQK_KFzafIu-sJoNF4A",
-              authDomain: "conexion-web-34212.firebaseapp.com",
-              projectId: "conexion-web-34212",
-              storageBucket: "conexion-web-34212.appspot.com",
-              messagingSenderId: "936689656145",
-              appId: "1:936689656145:web:4e41498ff210fbe131f370",
-              measurementId: "G-TK3ZWGSPHD"
-            };
-            // Initialize Firebase
-            const app = initializeApp(firebaseConfig);
-            const database = getDatabase(app);
-     
+  
+             // Your web app's Firebase configuration
+                const firebaseConfig = {
+                apiKey: "AIzaSyBMJsVpnbOwVOiVNbTZScZdet9qlGigDL0",
+                authDomain: "conexion-8ec0d.firebaseapp.com",
+                databaseURL: "https://conexion-8ec0d-default-rtdb.firebaseio.com",
+                projectId: "conexion-8ec0d",
+                storageBucket: "conexion-8ec0d.appspot.com",
+                messagingSenderId: "679910299749",
+                appId: "1:679910299749:web:9800b464879628b4850e8c"
+                };
+  
+             // Initialize Firebase
+                const app = initializeApp(firebaseConfig);
+                const database = getDatabase(app);
+                
         
     window.crearRegistro= function() {
         const nombre=document.getElementById("nombre").value;
@@ -108,7 +105,7 @@
         const mensaje=document.getElementById("mensaje").value;
         console.log(nombre, correo, motivo, mensaje);
         push(
-                    ref(database, 'CONEXION WEB'),
+                    ref(database, 'Lasluisa'),
                     {
                         name: nombre,
                         correos: correo,
