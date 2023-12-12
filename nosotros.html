@@ -91,20 +91,40 @@
 <body>
     <div class="login-container">
         <div class="logo-container">
-            <img src="ruta-del-logo.png" alt="Logo de la empresa">
+            <img src="https://es.postermywall.com/index.php/art/template/b281aeadaa832c28badd72c1f6c5caad/restaurant-logo-design-template" alt="Logo de la empresa">
         </div>
-        <h3 class="text-center mb-4">Iniciar sesión</h3>
+        <h3 class="text-center mb-4">FORMULARIO</h3>
         <form action="#" method="post">
+              
+             
+
             <div class="form-group">
-                <label for="username">Usuario:</label>
-                <input type="text" class="form-control" id="username" name="username" required>
+             <!-- Campo de texto para el nombre -->
+             <label for="nombre">Nombre:</label>
+             <input type="text" id="nombre" name="nombre" required>
             </div>
             <div class="form-group">
-                <label for="password">Contraseña:</label>
-                <input type="password" class="form-control" id="password" name="password" required>
+                <!-- Campo de correo electrónico -->
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo" required>
             </div>
             <div class="form-group">
-                <button type="submit" class="btn btn-primary hvr-float-shadow">Iniciar sesión</button>
+                  <!-- Campo de selección (dropdown) para la opción de motivo de contacto -->
+                  <label for="motivo">Motivo de contacto:</label>
+                  <select id="motivo" name="motivo">
+                      <option value="consulta">Consulta</option>
+                      <option value="comentario">Comentario</option>
+                      <option value="sugerencia">Sugerencia</option>
+                  </select>
+            </div>
+            <div class="form-group">
+                 <!-- Área de texto para el mensaje -->
+                 <label for="mensaje">Mensaje:</label>
+                 <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+ 
+            </div>
+            <div class="form-group">
+                <button type="submit"  onclick="crearRegistro()" class="btn btn-primary hvr-float-shadow">ENVIAR</button>
             </div>
         </form>
     </div>
@@ -113,77 +133,8 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-</body>
-</html>
 
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario</title>
-</head>
-
-<body>
-<<<<<<< HEAD
-
-    
-    <h1>COMENTARIOS Y SEGERENCIAS</h1>
-=======
-  
-    <h1>Formulario de Contacto</h1>
->>>>>>> c4f7f64197fb89b3b4c46c555e6a9c19994a68ed
-
-    <div class="row">
-
-        <div class="col-md-6">
-            <form action="/procesar-formulario" method="post">
-                <!-- Campo de texto para el nombre -->
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
-        
-                <!-- Campo de correo electrónico -->
-                <label for="correo">Correo electrónico:</label>
-                <input type="email" id="correo" name="correo" required>
-<<<<<<< HEAD
-
-=======
-            </form>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-6">
-            <form action="procesar_formulario" method="post">
->>>>>>> c4f7f64197fb89b3b4c46c555e6a9c19994a68ed
-                <!-- Campo de selección (dropdown) para la opción de motivo de contacto -->
-                <label for="motivo">Motivo de contacto:</label>
-                <select id="motivo" name="motivo">
-                    <option value="consulta">Consulta</option>
-                    <option value="comentario">Comentario</option>
-                    <option value="sugerencia">Sugerencia</option>
-                </select>
-                        <!-- Área de texto para el mensaje -->
-                <label for="mensaje">Mensaje:</label>
-                <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-
-                <!-- Botón de envío -->
-        
-           <button type="button" onclick="crearRegistro()">ENVIAR</button>
-
-            </form>
-        </div>
-    </div>
-<<<<<<< HEAD
-=======
-
-   <div class="row">
-    <div class="col-md-6">
-           <!-- Botón de envío -->
-        
-           <button type="button" onclick="crearRegistro()">ENVIAR</button>
-    </div>
-   </div>
 
           <!--conexxion con firebase -->
          <script type="module">
