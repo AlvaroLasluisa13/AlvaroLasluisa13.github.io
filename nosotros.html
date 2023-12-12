@@ -125,10 +125,15 @@
     <title>Formulario</title>
 </head>
 
-
 <body>
+<<<<<<< HEAD
+
+    
+    <h1>COMENTARIOS Y SEGERENCIAS</h1>
+=======
   
     <h1>Formulario de Contacto</h1>
+>>>>>>> c4f7f64197fb89b3b4c46c555e6a9c19994a68ed
 
     <div class="row">
 
@@ -141,12 +146,16 @@
                 <!-- Campo de correo electrónico -->
                 <label for="correo">Correo electrónico:</label>
                 <input type="email" id="correo" name="correo" required>
+<<<<<<< HEAD
+
+=======
             </form>
         </div>
     </div>
     <div class="row">
         <div class="col-md-6">
             <form action="procesar_formulario" method="post">
+>>>>>>> c4f7f64197fb89b3b4c46c555e6a9c19994a68ed
                 <!-- Campo de selección (dropdown) para la opción de motivo de contacto -->
                 <label for="motivo">Motivo de contacto:</label>
                 <select id="motivo" name="motivo">
@@ -157,9 +166,16 @@
                         <!-- Área de texto para el mensaje -->
                 <label for="mensaje">Mensaje:</label>
                 <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+                <!-- Botón de envío -->
+        
+           <button type="button" onclick="crearRegistro()">ENVIAR</button>
+
             </form>
         </div>
     </div>
+<<<<<<< HEAD
+=======
 
    <div class="row">
     <div class="col-md-6">
@@ -168,30 +184,6 @@
            <button type="button" onclick="crearRegistro()">ENVIAR</button>
     </div>
    </div>
-     
-   <br><br>
-   <!-- <h1>LISTA DE COMENTARIOS</h1> -->
-   <!-- <table class="table table-borderred" id="tbl_product">
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>NAME</th>
-        <th>CORREO</th>
-        <th>CONSULTA</th>
-        <th>MENSAJE</th>
-        <th>ACCIÓN</th>
-      </tr>
-    </thead> -->
-    <!-- <tbody>
-        <?php foreach ($productList as $p): ?>
-          <tr>
-            <td><?php echo $p->nombre ?></td>
-            <td><?php echo $p->correo ?></td>
-            <td><?php echo $p->consulta?></td>
-            <td><?php echo $p->mensaje?></td>
-        </tr>
-        <?php endforeach; ?> -->
-    <!-- </tbody> -->
 
           <!--conexxion con firebase -->
          <script type="module">
